@@ -15,7 +15,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   }, []);
 
   const lineChart = (
-    dailyData.length ? 
+    dailyData.length ? ( 
     <Line 
       data={{
         labels: dailyData.map(({ date }) => date),
@@ -29,10 +29,10 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
           label: 'Deaths',
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
-          fill: true
+          fill: true,
         }],
       }}
-    /> : null
+    />) : null
   );
 
   const barChart = (
